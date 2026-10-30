@@ -158,6 +158,7 @@ export function CinematicIntro({ onTransitionStart, onComplete }: CinematicIntro
 
       gsap.set(figureWrapRef.current, {
         opacity: 0,
+        xPercent: -50,
         yPercent: 14,
         scale: 0.98,
         transformOrigin: '50% 100%',
@@ -258,6 +259,7 @@ export function CinematicIntro({ onTransitionStart, onComplete }: CinematicIntro
         figureWrapRef.current,
         {
           opacity: 1,
+          xPercent: -50,
           yPercent: 0,
           scale: 1.0,
           duration: 1.8,
@@ -320,6 +322,7 @@ export function CinematicIntro({ onTransitionStart, onComplete }: CinematicIntro
         figureWrapRef.current,
         {
           opacity: 0,
+          xPercent: -50,
           scale: 1.03,
           duration: 0.85,
           ease: 'power2.inOut',

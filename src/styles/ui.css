@@ -944,6 +944,7 @@ html[data-pointer-modal='true'] dialog * {
   position: absolute;
   bottom: 0;
   left: 50%;
+  translate: -50% 0;
   transform: translateX(-50%);
   z-index: 5;
   height: 84vh;
