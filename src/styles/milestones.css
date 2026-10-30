@@ -1,0 +1,1070 @@
+/* ------------------------------------------------------------------ */
+/* SECTION 06: CINEMATIC ARCHITECTURAL EXHIBITION ENGINE               */
+/* Deep obsidian & copper gallery for verified achievements           */
+/* ------------------------------------------------------------------ */
+
+.milestones-archive {
+  position: relative;
+  height: 480vh;
+  background: #06070a;
+  color: var(--warm);
+  isolation: isolate;
+  z-index: 3;
+  scroll-margin-top: 0;
+}
+
+/* 100vh Sticky Exhibition Viewport Stage */
+.milestones-archive__sticky {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 90% 80% at 50% 40%, #0d0f17 0%, #06070a 70%),
+    #06070a;
+}
+
+/* 3D WebGL Exhibition Pavilion Canvas */
+.milestones-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.milestones-canvas canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+/* Atmospheric Ambient Lights & Exhibition Vignette */
+.milestones-archive__ambient {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle 800px at 20% 45%, rgba(255, 122, 56, 0.035) 0%, transparent 60%),
+    radial-gradient(circle 800px at 80% 55%, rgba(255, 90, 32, 0.04) 0%, transparent 65%),
+    radial-gradient(circle 900px at 50% 20%, rgba(255, 140, 60, 0.025) 0%, transparent 70%);
+}
+
+.milestones-archive__vignette {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(110% 85% at 50% 50%, transparent 40%, rgba(5, 6, 9, 0.85) 100%),
+    linear-gradient(180deg, rgba(6, 7, 10, 0.7) 0%, transparent 15%, transparent 85%, rgba(6, 7, 10, 0.9) 100%);
+}
+
+/* ------------------------------------------------------------------ */
+/* FLOATING ARCHITECTURAL EDITORIAL OVERLAYS DECK                    */
+/* ------------------------------------------------------------------ */
+
+.milestones-deck {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arch-zone {
+  position: absolute;
+  inset: 0;
+  padding: clamp(80px, 12vh, 110px) var(--gutter) clamp(70px, 9vh, 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  will-change: transform, opacity;
+}
+
+[data-zone-0] { z-index: 2; }
+[data-zone-1] { z-index: 3; }
+[data-zone-2] { z-index: 4; }
+[data-zone-3] { z-index: 5; }
+
+/* ------------------------------------------------------------------ */
+/* ZONE 0: HERO ENTRANCE — "A record of becoming."                    */
+/* Clear hierarchy: Tag -> Title -> Subtitle -> Conduit Instruction    */
+/* ------------------------------------------------------------------ */
+
+.arch-hero {
+  max-width: 880px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(12px, 2vh, 22px);
+  pointer-events: auto;
+}
+
+.arch-hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.arch-tag {
+  color: rgba(243, 240, 235, 0.6);
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.arch-line {
+  width: 28px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 122, 56, 0.65), transparent);
+}
+
+.arch-index {
+  color: #ff9d5c;
+  font-family: var(--font-mono, monospace);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.arch-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(3.2rem, 7.5vw, 6.8rem);
+  font-weight: 500;
+  line-height: 0.92;
+  letter-spacing: -0.065em;
+  color: var(--warm);
+  text-shadow:
+    0 0 50px rgba(255, 122, 56, 0.18),
+    0 2px 28px rgba(4, 5, 8, 0.95);
+}
+
+.arch-hero__em {
+  display: inline-block;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  color: #ff8844;
+  letter-spacing: -0.02em;
+  padding-right: 0.05em;
+  text-shadow: 0 0 35px rgba(255, 122, 56, 0.45);
+}
+
+.arch-hero__desc {
+  max-width: 52ch;
+  color: rgba(243, 240, 235, 0.74);
+  font-size: clamp(13px, 1.12vw, 15px);
+  line-height: 1.7;
+}
+
+.arch-hero__conduit-prompt {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 122, 56, 0.22);
+  background: rgba(14, 16, 24, 0.68);
+  backdrop-filter: blur(12px);
+  color: rgba(243, 240, 235, 0.65);
+  font-family: var(--font-mono, monospace);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.arch-hero__pulse-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ff7a38;
+  box-shadow: 0 0 10px #ff7a38;
+  animation: arch-dot-pulse 2s ease-in-out infinite;
+}
+
+@keyframes arch-dot-pulse {
+  0%, 100% { opacity: 0.4; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.3); }
+}
+
+/* ------------------------------------------------------------------ */
+/* ZONE 1: THE ACADEMIC MONUMENT & 9.55 CGPA                          */
+/* Positioned on the right spatial third, framing the 3D 9.55         */
+/* sculpture on the left with zero overlap and ample negative space    */
+/* ------------------------------------------------------------------ */
+
+.arch-zone--academic {
+  justify-content: flex-end;
+}
+
+.arch-panel {
+  pointer-events: auto;
+  background: linear-gradient(145deg, rgba(16, 19, 28, 0.88) 0%, rgba(9, 11, 16, 0.92) 100%);
+  border: 1px solid rgba(255, 140, 75, 0.28);
+  border-radius: 18px;
+  padding: clamp(24px, 3.2vh, 34px);
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.85),
+    0 0 30px rgba(255, 122, 56, 0.06),
+    inset 0 1px 0 rgba(255, 200, 160, 0.18);
+  backdrop-filter: blur(20px);
+}
+
+.arch-panel--right {
+  max-width: 500px;
+  width: 100%;
+  margin-right: clamp(20px, 4vw, 70px);
+}
+
+.arch-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding-bottom: 14px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.arch-panel__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffb578;
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-shadow: 0 0 14px rgba(255, 122, 56, 0.4);
+}
+
+.arch-icon {
+  width: 15px;
+  height: 15px;
+  color: #ff7a38;
+}
+
+.arch-panel__period {
+  color: rgba(243, 240, 235, 0.5);
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+}
+
+/* Metric Display Highlight */
+.arch-panel__hero-metric {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 18px;
+  padding: 14px 18px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(255, 122, 56, 0.08) 0%, rgba(16, 19, 28, 0.6) 100%);
+  border: 1px solid rgba(255, 122, 56, 0.22);
+}
+
+.arch-metric {
+  display: flex;
+  align-items: baseline;
+}
+
+.arch-metric__val {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 3.8vw, 3.2rem);
+  font-weight: 600;
+  line-height: 1;
+  color: #fff;
+  text-shadow: 0 0 24px rgba(255, 122, 56, 0.35);
+}
+
+.arch-metric__max {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-style: italic;
+  color: rgba(243, 240, 235, 0.5);
+  margin-left: 4px;
+}
+
+.arch-metric__legend {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.arch-metric__label {
+  font-size: 12px;
+  color: rgba(243, 240, 235, 0.85);
+  font-weight: 500;
+}
+
+.arch-metric__badge {
+  font-family: var(--font-mono, monospace);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  color: #ffaa66;
+  text-transform: uppercase;
+}
+
+.arch-panel__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 1.7vw, 1.45rem);
+  font-weight: 500;
+  color: var(--warm);
+  line-height: 1.25;
+  margin-bottom: 5px;
+}
+
+.arch-panel__sub {
+  color: #ff9d5c;
+  font-size: 12.5px;
+  font-weight: 500;
+  margin-bottom: 7px;
+}
+
+.arch-panel__location {
+  color: rgba(243, 240, 235, 0.65);
+  font-size: 12px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.arch-panel__status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  color: rgba(243, 240, 235, 0.8);
+  font-size: 11px;
+  margin-bottom: 16px;
+}
+
+.arch-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #34d399;
+  box-shadow: 0 0 8px #34d399;
+}
+
+.arch-panel__details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.arch-detail-row {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.arch-detail-label {
+  color: rgba(243, 240, 235, 0.45);
+  font-family: var(--font-mono, monospace);
+  font-size: 9.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.arch-detail-text {
+  color: rgba(243, 240, 235, 0.75);
+  font-size: 11.5px;
+  line-height: 1.5;
+}
+
+.arch-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.arch-chip {
+  padding: 4px 9px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(243, 240, 235, 0.75);
+  font-size: 10.5px;
+}
+
+.arch-chip--glow {
+  background: rgba(255, 122, 56, 0.09);
+  border-color: rgba(255, 122, 56, 0.25);
+  color: #ffaa66;
+}
+
+.arch-chip--sm {
+  font-size: 10px;
+  padding: 3px 8px;
+}
+
+/* ------------------------------------------------------------------ */
+/* ZONE 2: INDUSTRY BRIDGE & HACKATHON EXHIBITION                     */
+/* ------------------------------------------------------------------ */
+
+.arch-split {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: clamp(16px, 2.5vw, 36px);
+  max-width: 1260px;
+  width: 100%;
+}
+
+.arch-pylon-list,
+.arch-victory-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.arch-pylon-card,
+.arch-victory-card {
+  padding: 13px 16px;
+  border-radius: 12px;
+  background: rgba(18, 22, 33, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.arch-pylon-card:hover,
+.arch-victory-card:hover {
+  border-color: rgba(255, 122, 56, 0.35);
+}
+
+.arch-pylon-card__top,
+.arch-victory-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.arch-pylon-card__type {
+  font-family: var(--font-mono, monospace);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: #ff9d5c;
+  text-transform: uppercase;
+}
+
+.arch-pylon-card__period,
+.arch-victory-card__date {
+  font-family: var(--font-mono, monospace);
+  font-size: 10px;
+  color: rgba(243, 240, 235, 0.45);
+}
+
+.arch-pylon-card__company {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--warm);
+  margin-bottom: 2px;
+}
+
+.arch-pylon-card__role {
+  font-size: 11.5px;
+  color: rgba(243, 240, 235, 0.8);
+  margin-bottom: 5px;
+}
+
+.arch-pylon-card__desc {
+  font-size: 11px;
+  color: rgba(243, 240, 235, 0.6);
+  line-height: 1.5;
+  margin-bottom: 7px;
+}
+
+.arch-pylon-card__cred {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  font-family: var(--font-mono, monospace);
+  color: #34d399;
+  margin-bottom: 7px;
+}
+
+.arch-pylon-card__cred-icon {
+  width: 12px;
+  height: 12px;
+}
+
+.arch-panel__badge--gold {
+  color: #f59e0b;
+}
+
+.arch-panel__badge--gold .arch-icon {
+  color: #f59e0b;
+}
+
+.arch-victory-card__rank-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.arch-victory-card__trophy {
+  width: 13px;
+  height: 13px;
+  color: #f59e0b;
+}
+
+.arch-victory-card__rank {
+  font-family: var(--font-mono, monospace);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: #f59e0b;
+  text-transform: uppercase;
+}
+
+.arch-victory-card__prize {
+  font-family: var(--font-mono, monospace);
+  font-size: 10px;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.28);
+  color: #fcd34d;
+}
+
+.arch-victory-card__title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--warm);
+  margin-bottom: 2px;
+}
+
+.arch-victory-card__event {
+  font-size: 11px;
+  color: rgba(243, 240, 235, 0.65);
+  margin-bottom: 5px;
+}
+
+.arch-victory-card__meta {
+  font-size: 10px;
+  color: rgba(243, 240, 235, 0.55);
+}
+
+.arch-victory-card__notes {
+  margin-top: 4px;
+  font-size: 10px;
+  color: rgba(243, 240, 235, 0.6);
+  font-style: italic;
+}
+
+.arch-finalist-section {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.arch-finalist-title {
+  display: block;
+  font-family: var(--font-mono, monospace);
+  font-size: 9.5px;
+  color: rgba(243, 240, 235, 0.45);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+}
+
+.arch-finalist-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.arch-finalist-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  color: rgba(243, 240, 235, 0.7);
+}
+
+.arch-finalist-rank {
+  font-family: var(--font-mono, monospace);
+  font-size: 9px;
+  color: #94a3b8;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.arch-finalist-name {
+  font-weight: 500;
+  color: var(--warm);
+}
+
+.arch-finalist-event {
+  color: rgba(243, 240, 235, 0.45);
+  font-size: 10px;
+}
+
+/* ------------------------------------------------------------------ */
+/* ZONE 3: REAL SYSTEMS SPATIAL EXHIBITION                           */
+/* ------------------------------------------------------------------ */
+
+.arch-systems-layout {
+  display: grid;
+  grid-template-columns: 310px 1fr;
+  gap: clamp(18px, 2.8vw, 36px);
+  max-width: 1260px;
+  width: 100%;
+}
+
+.arch-systems-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  pointer-events: auto;
+}
+
+.arch-system-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 13px 16px;
+  border-radius: 14px;
+  background: rgba(14, 17, 25, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(12px);
+}
+
+.arch-system-btn:hover {
+  background: rgba(24, 28, 42, 0.85);
+  border-color: rgba(255, 122, 56, 0.35);
+}
+
+.arch-system-btn.is-active {
+  background: linear-gradient(135deg, rgba(255, 122, 56, 0.16) 0%, rgba(18, 22, 34, 0.9) 100%);
+  border-color: #ff7a38;
+  box-shadow: 0 0 20px rgba(255, 122, 56, 0.2);
+}
+
+.arch-system-btn__indicator {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.arch-system-btn.is-active .arch-system-btn__indicator {
+  background: #ff7a38;
+  box-shadow: 0 0 10px #ff7a38;
+}
+
+.arch-system-btn__text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.arch-system-btn__title {
+  font-family: var(--font-display);
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--warm);
+}
+
+.arch-system-btn__cat {
+  font-size: 10px;
+  color: rgba(243, 240, 235, 0.55);
+  line-height: 1.3;
+}
+
+.arch-system-btn__tag {
+  font-family: var(--font-mono, monospace);
+  font-size: 8px;
+  letter-spacing: 0.12em;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgba(255, 122, 56, 0.15);
+  color: #ff9d5c;
+  border: 1px solid rgba(255, 122, 56, 0.3);
+}
+
+/* Active Blueprint Panel */
+.arch-blueprint {
+  pointer-events: auto;
+  background: rgba(12, 15, 22, 0.82);
+  border: 1px solid rgba(255, 122, 56, 0.2);
+  border-radius: 18px;
+  padding: clamp(22px, 2.8vh, 32px);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(16px);
+}
+
+.arch-blueprint__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.arch-blueprint__meta-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.arch-blueprint__year {
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  color: rgba(243, 240, 235, 0.5);
+}
+
+.arch-blueprint__node-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #ff9d5c;
+  font-family: var(--font-mono, monospace);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.arch-blueprint__icon {
+  width: 13px;
+  height: 13px;
+}
+
+.arch-blueprint__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2.1vw, 1.75rem);
+  font-weight: 500;
+  color: var(--warm);
+  margin-bottom: 3px;
+}
+
+.arch-blueprint__category {
+  color: #ff9d5c;
+  font-size: 12.5px;
+  margin-bottom: 6px;
+}
+
+.arch-blueprint__affiliation {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #f59e0b;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.arch-blueprint__sparkle {
+  width: 13px;
+  height: 13px;
+}
+
+.arch-blueprint__stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  max-width: 320px;
+}
+
+.arch-blueprint__stack-label {
+  font-family: var(--font-mono, monospace);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  color: rgba(243, 240, 235, 0.45);
+  text-transform: uppercase;
+}
+
+.arch-blueprint__summary {
+  font-size: clamp(12px, 1.05vw, 13.5px);
+  color: rgba(243, 240, 235, 0.78);
+  line-height: 1.65;
+  margin-bottom: 18px;
+}
+
+.arch-pillars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.arch-pillar {
+  padding: 13px 15px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.arch-pillar__top {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 5px;
+}
+
+.arch-pillar__indicator {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #ff7a38;
+}
+
+.arch-pillar__label {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--warm);
+}
+
+.arch-pillar__desc {
+  font-size: 10.5px;
+  color: rgba(243, 240, 235, 0.65);
+  line-height: 1.5;
+}
+
+.arch-blueprint__accolades {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.arch-blueprint__accolades-label {
+  font-family: var(--font-mono, monospace);
+  font-size: 10px;
+  color: rgba(243, 240, 235, 0.45);
+  text-transform: uppercase;
+}
+
+.arch-blueprint__award-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  padding: 4px 9px;
+  border-radius: 6px;
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.28);
+  color: #fcd34d;
+}
+
+.arch-blueprint__trophy {
+  width: 12px;
+  height: 12px;
+}
+
+/* ------------------------------------------------------------------ */
+/* FLOATING TIMELINE RAIL: QUICK-JUMP NAVIGATION                      */
+/* ------------------------------------------------------------------ */
+
+.arch-rail {
+  position: absolute;
+  bottom: clamp(16px, 2.8vh, 30px);
+  left: 50%;
+  translate: -50% 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(14, 16, 24, 0.82);
+  border: 1px solid rgba(255, 122, 56, 0.22);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  pointer-events: auto;
+}
+
+.arch-rail__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: none;
+  background: transparent;
+  color: rgba(243, 240, 235, 0.55);
+  font-family: var(--font-mono, monospace);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.arch-rail__dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.arch-rail__btn:hover {
+  color: var(--warm);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.arch-rail__btn.is-active {
+  color: #fff;
+  background: rgba(255, 122, 56, 0.16);
+  border: 1px solid rgba(255, 122, 56, 0.35);
+}
+
+.arch-rail__btn.is-active .arch-rail__dot {
+  background: #ff7a38;
+  box-shadow: 0 0 8px #ff7a38;
+}
+
+/* ------------------------------------------------------------------ */
+/* RESPONSIVE DESIGN                                                  */
+/* ------------------------------------------------------------------ */
+
+@media (max-width: 1024px) {
+  .arch-split {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .arch-systems-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .arch-blueprint__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .arch-blueprint__stack {
+    align-items: flex-start;
+  }
+
+  .arch-panel--right {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .milestones-archive {
+    height: 360vh;
+  }
+
+  .arch-zone {
+    padding-inline: 16px;
+    padding-top: 84px;
+    padding-bottom: 88px;
+    align-items: flex-start;
+  }
+
+  .arch-panel {
+    padding: 18px;
+    max-height: calc(100svh - 176px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 122, 56, 0.4) transparent;
+  }
+
+  .arch-panel::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .arch-panel::-webkit-scrollbar-thumb {
+    background: rgba(255, 122, 56, 0.4);
+    border-radius: 4px;
+  }
+
+  .arch-rail {
+    left: 12px;
+    right: auto;
+    translate: none;
+    max-width: calc(100vw - 84px);
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .arch-rail::-webkit-scrollbar {
+    display: none;
+  }
+
+  .arch-hero__title {
+    font-size: clamp(2.4rem, 11vw, 3.8rem);
+  }
+
+  .arch-hero__desc {
+    font-size: 12px;
+  }
+
+  .arch-pillars {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* REDUCED MOTION                                                     */
+/* ------------------------------------------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+  .milestones-archive {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .milestones-archive__sticky {
+    position: relative;
+    height: auto;
+    overflow: visible;
+    padding: 80px 0;
+  }
+
+  .milestones-deck {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .arch-zone {
+    position: relative;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    padding: 0 var(--gutter);
+  }
+
+  .arch-rail {
+    display: none;
+  }
+}

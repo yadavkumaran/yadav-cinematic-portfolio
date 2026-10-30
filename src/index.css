@@ -1,0 +1,19 @@
+@import 'tailwindcss';
+@import './styles/base.css';
+@import './styles/ui.css';
+@import './styles/hero.css';
+@import './styles/scenes.css';
+@import './styles/milestones.css';
+
+@theme {
+  --color-obsidian: #08090c;
+  --color-charcoal: #121319;
+  --color-ember: #ff612f;
+  --color-solar: #e83d32;
+  --color-warm: #f3f0eb;
+  --color-violet: #9f91ff;
+  --color-muted: #9b9ba5;
+  --font-display: 'Space Grotesk Variable', 'Space Grotesk', system-ui, sans-serif;
+  --font-sans: 'Inter Variable', 'Inter', system-ui, sans-serif;
+  --font-serif: 'Instrument Serif', 'Iowan Old Style', Georgia, serif;
+}
