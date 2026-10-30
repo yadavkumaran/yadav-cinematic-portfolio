@@ -3,7 +3,6 @@ import { SiteNav } from './components/navigation/SiteNav';
 import { LoadingIntro } from './components/ui/LoadingIntro';
 import { CinematicIntro } from './components/ui/CinematicIntro';
 import { CustomCursor } from './components/ui/CustomCursor';
-import { CinematicTour } from './components/ui/CinematicTour';
 import { SolarHero } from './components/scenes/SolarHero';
 import { AIUniverseScene } from './components/scenes/AIUniverseScene';
 import { CosmicTransition } from './components/scenes/CosmicTransition';
@@ -67,7 +66,6 @@ export default function App() {
       <div className="grain" aria-hidden="true" />
       <CustomCursor />
       <SiteNav />
-      <CinematicTour isModalOpen={activeProject !== null} />
       {!hasDirectAnchor && !loaderDone && <LoadingIntro onComplete={handleLoadingComplete} />}
       {!hasDirectAnchor && loaderDone && !introDone && (
         <CinematicIntro
