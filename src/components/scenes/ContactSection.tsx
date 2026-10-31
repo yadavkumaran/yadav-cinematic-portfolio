@@ -13,6 +13,7 @@ export function ContactSection() {
     { href: site.github as string, label: 'GitHub' },
     { href: site.linkedin as string, label: 'LinkedIn' },
     { href: site.resume as string, label: 'Résumé' },
+    { href: 'tel:+919842647947', label: '+91 98426 47947' },
   ].filter((link) => hasLink(link.href));
 
   useLayoutEffect(() => {

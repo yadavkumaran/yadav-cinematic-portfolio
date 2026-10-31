@@ -63,16 +63,17 @@ export const site = {
   intro:
     'Full-stack engineering, applied AI, and data-driven products — built with care for the people using them.',
   /** Leave empty to hide the corresponding action. */
-  email: '',
-  github: '',
-  linkedin: '',
+  email: 'yadavkumaran222008@gmail.com',
+  github: 'https://github.com/yadavkumaran',
+  linkedin: 'https://www.linkedin.com/in/yadavkumaran/',
   resume: '',
   /** Optional real portrait path. Leave empty to show the original illustration. */
   portrait: '/images/yadav-kumaran-portrait.png',
   portraitAlt:
     'Yadav Kumaran in a dark suit and tie, wearing sunglasses, lit by warm orange light against a dark background.',
   portraitQuote: 'Still learning. Always building.',
-  location: '',
+  location: 'Coimbatore, India',
+  phone: '+91 98426 47947',
   year: new Date().getFullYear(),
 } as const;
 
